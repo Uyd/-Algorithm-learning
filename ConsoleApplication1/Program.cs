@@ -11,9 +11,9 @@ namespace algorithm
         static void Main(string[] args)
         {
             var IS = new Seqencing();
-            int[] num = { 5, 2, 4, 6, 1, 3 };
-            var p = IS.Insertion_sort(num);
-
+            int[] number = { 5, 2, 4, 6, 1, 3 };
+            //var p = IS.Insertion_sort(number);//插入
+            var p = IS.Bubble_sort(number);//冒泡
             //输出
             foreach (var r in p)
             {
@@ -47,5 +47,47 @@ namespace algorithm
             }
             return n;
         }
+
+        /// <summary>
+        /// 冒泡排序
+        /// </summary>
+        public int[] Bubble_sort(int[] n)
+        {
+            for (int pass = n.Length; pass >= 0; pass--)
+            {
+                for (int i = 0; i < pass - 1; i++)
+                {
+                    if (n[i] > n[i + 1])
+                    {
+                        //交换元素
+                        int temp = n[i];
+                        n[i] = n[i + 1];
+                        n[i + 1] = temp;
+                    }
+                }
+            }
+            return n;
+        }
+
+        //增加一个标记来改进该算法，排序过程中，没有进行交换操作则排序完成，结束算法
+        //int swapped = 1;
+        //    for (int pass = n.Length; pass >= 0 && swapped == 1; pass--)
+        //    {
+        //        swapped = 0;
+        //        for (int i = 0; i < pass - 1; i++)
+        //        {
+        //            if (n[i] > n[i + 1])
+        //            {
+        //                //交换元素
+        //                int temp = n[i];
+        //                n[i] = n[i + 1];
+        //                n[i + 1] = temp;
+        //                swapped = 1;
+        //            }
+                    
+        //        }
+        //    }
+        //    return n;
+        //}
     }
 }
