@@ -10,9 +10,9 @@ namespace algorithm
     {
         static void Main(string[] args)
         {
-            var one = new Insertion_sort();
+            var IS = new Seqencing();
             int[] num = { 5, 2, 4, 6, 1, 3 };
-            var p = one.test(num);
+            var p = IS.Insertion_sort(num);
 
             //输出
             foreach (var r in p)
@@ -24,11 +24,14 @@ namespace algorithm
     }
 
     /// <summary>
-    /// 插入排序
+    /// 排序算法
     /// </summary>
-    public class Insertion_sort
+    public class Seqencing
     {
-        public int[] test(int[] n)
+        /// <summary>
+        /// 插入排序
+        /// </summary>
+        public int[] Insertion_sort(int[] n)
         {
             var j = 0;
             for (var i = 1; i < 6; i++)
