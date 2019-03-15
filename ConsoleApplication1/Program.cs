@@ -13,7 +13,8 @@ namespace algorithm
             var IS = new Seqencing();
             int[] number = { 5, 2, 4, 6, 1, 3 };
             //var p = IS.Insertion_sort(number);//插入
-            var p = IS.Bubble_sort(number);//冒泡
+            //var p = IS.Bubble_sort(number);//冒泡
+            var p = IS.select_sort(number);//选择
             //输出
             foreach (var r in p)
             {
@@ -51,6 +52,8 @@ namespace algorithm
         /// <summary>
         /// 冒泡排序
         /// </summary>
+        #region 程序
+
         public int[] Bubble_sort(int[] n)
         {
             for (int pass = n.Length; pass >= 0; pass--)
@@ -84,10 +87,34 @@ namespace algorithm
         //                n[i + 1] = temp;
         //                swapped = 1;
         //            }
-                    
+
         //        }
         //    }
         //    return n;
         //}
+        #endregion
+
+
+        /// <summary>
+        /// 选择排序
+        /// </summary>
+        public int[] select_sort(int[] n)
+        {
+            int i, j, min, temp;
+            for (i = 0; i < n.Length - 1; i++)
+            {
+                min = i;
+                for (j = i + 1; j < n.Length; j++)
+                {
+                    if (n[j] < n[min])
+                        min = j;
+                } 
+                //交换元素
+                temp = n[min];
+                n[min] = n[i];
+                n[i] = temp;
+            }
+            return n;
+        }
     }
 }

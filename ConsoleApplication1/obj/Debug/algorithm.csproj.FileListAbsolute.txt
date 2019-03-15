@@ -1,0 +1,6 @@
+C:\Users\code\Desktop\网易-麻省理工学院公开课：算法导论\Basic_Algorithm\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\code\Desktop\网易-麻省理工学院公开课：算法导论\Basic_Algorithm\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\code\Desktop\网易-麻省理工学院公开课：算法导论\Basic_Algorithm\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\code\Desktop\网易-麻省理工学院公开课：算法导论\Basic_Algorithm\ConsoleApplication1\obj\Debug\algorithm.csprojResolveAssemblyReference.cache
+C:\Users\code\Desktop\网易-麻省理工学院公开课：算法导论\Basic_Algorithm\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\code\Desktop\网易-麻省理工学院公开课：算法导论\Basic_Algorithm\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
