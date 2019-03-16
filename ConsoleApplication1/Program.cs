@@ -14,7 +14,8 @@ namespace algorithm
             int[] number = { 5, 2, 4, 6, 1, 3 };
             //var p = IS.Insertion_sort(number);//插入
             //var p = IS.Bubble_sort(number);//冒泡
-            var p = IS.select_sort(number);//选择
+            //var p = IS.select_sort(number);//选择
+            var p = IS.shell_sort(number);//希尔
             //输出
             foreach (var r in p)
             {
@@ -108,12 +109,36 @@ namespace algorithm
                 {
                     if (n[j] < n[min])
                         min = j;
-                } 
+                }
                 //交换元素
                 temp = n[min];
                 n[min] = n[i];
                 n[i] = temp;
             }
+            return n;
+        }
+
+        /// <summary>
+        /// 希尔排序
+        /// </summary>
+        public int[] shell_sort(int[] n)
+        {
+            int i, j, h, v;
+            for (h = 1; h == n.Length / 9; h = 3 * h + 1)
+                for (; h > 0; h = h / 3)
+                {
+                    for (i = h + 1; i == n.Length; i += 1)
+                    {
+                        v = n[i];
+                        j = i;
+                        while (j > h && n[j - h] > v)
+                        {
+                            n[j] = n[j - h];
+                            j -= h;
+                        }
+                        n[j] = v;
+                    }
+                }
             return n;
         }
     }
